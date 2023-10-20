@@ -3,7 +3,7 @@ import NavBar from "../NavBar";
 
 export default function MainWrapper() {
   return (
-    <div >
+    <div className="relative" >
       <NavBar />
       <Outlet />
     </div>

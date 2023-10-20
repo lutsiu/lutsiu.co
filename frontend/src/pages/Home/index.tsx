@@ -1,3 +1,12 @@
+
+import HeroSection from "./Sections/Hero";
+import WhatWeDoSection from "./Sections/WhatWeDo";
 export default function HomePage() {
-  return <div></div>;
+
+  return (
+    <div>
+      <HeroSection/>
+      <WhatWeDoSection/>
+    </div>
+  );
 }
