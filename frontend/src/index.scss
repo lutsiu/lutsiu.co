@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 62.5%;
+
+  @apply overflow-x-hidden;
+}
+
+html,
+:root,
+body {
+  @apply h-full w-full box-border m-0 p-0 bg-black text-white max-h-[100vh] min-h-[100vh];
+}
+ul {
+  @apply m-0 p-0;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
