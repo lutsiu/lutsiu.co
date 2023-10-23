@@ -3,10 +3,9 @@ import design from "../../../../assets/showcase/design-2.jpg";
 import GradientTape from "./GradientTape";
 import styles from "./styles.module.scss";
 import Cards from "./Cards";
-
 export default function ShowCase() {
   const sectionRef = useRef<null | HTMLTableSectionElement>(null);
-
+  
   return (
     <section
       className="showcase-section bg-white relative min-h-[150vh]"
@@ -21,7 +20,7 @@ export default function ShowCase() {
             className="w-full h-full object-cover"
           />
         </div>
-        <Cards />
+        <Cards sectionRef={sectionRef} />
       </div>
       
     </section>
