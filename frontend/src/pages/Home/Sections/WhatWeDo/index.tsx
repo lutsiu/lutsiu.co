@@ -61,7 +61,7 @@ export default function WhatWeDoSection() {
         />
       </div>
       <p
-        className="mt-[7rem] text-left text-2xl lg:text-4xl font-normal mx-auto px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[20rem]"
+        className="mt-[7rem] text-left text-2xl lg:text-4xl font-normal mx-auto px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[22rem]"
         style={{ fontFamily: "Montserrat" }}
       >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,

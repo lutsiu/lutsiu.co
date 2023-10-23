@@ -8,9 +8,9 @@ export default function Card(props: ICard) {
     <Link
       to={`${link}`}
       target="_blank"
-      className={`relative flex-1 h-[35rem] md:h-[50rem] flex flex-col z-10`}
+      className={`relative flex-1 h-[35rem] md:h-[50rem] flex flex-col z-10 overflow-hidden`}
     >
-      <img src={img} alt="card-image" className="w-full flex-1 object-cover" />
+      <img src={img} alt="card-image" className="w-full flex-1 object-cover hover:scale-105 duration-200" />
       <div className=" flex flex-col gap-[1rem] text-black mt-[1.5rem]">
         <h4
           style={{ fontFamily: "Montserrat" }}

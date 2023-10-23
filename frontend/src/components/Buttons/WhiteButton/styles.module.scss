@@ -1,0 +1,8 @@
+.white {
+  @apply bg-white border-black
+  hover:bg-black hover:text-white;
+}
+.black {
+  @apply bg-black text-white border-white
+  hover:bg-white hover:text-black;
+}

@@ -3,7 +3,7 @@ import Card from "./Card";
 import cardsInfo from "./cards-info";
 export default function ServicesSection() {
   return (
-    <section className="section-services bg-white text-black px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[20rem] py-[4rem] lg:py-[8rem]">
+    <section className="section-services bg-white text-black px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[22rem] py-[4rem] lg:py-[8rem]">
       <div className="flex flex-col md:flex-row md:justify-between  md:items-center xl:gap-[7rem]">
         <div className="xl:flex-[7] md:flex-[6]">
           <h3 className="text-gradient">OUR METHOD</h3>
