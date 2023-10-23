@@ -3,14 +3,33 @@ import rightHand from "../../../../assets/hand-right.png";
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import WhiteButton from "../../../../components/Buttons/WhiteButton";
+import { useEffect, useState } from "react";
 export default function WhatWeDoSection() {
+  const [showAnimation, setShowAnimation] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const {scrollY} = window;
+      if (scrollY > 200) {
+        setShowAnimation(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <section className="min-h-screen section-hands bg-white  flex flex-col text-black">
-      <div
+    <section className=" section-hands bg-white  flex flex-col text-black">
+      <motion.div
+        initial={{ y: 150, opacity: 0 }}
+        animate={{ y: showAnimation? 0: 150, opacity: showAnimation ? 1 : 0 }}
+        transition={{duration: 0.5, delay: 0.1}}
         className={`${styles["what-we-do-container"]} mt-[5rem] text-center`}
       >
         <h3
-          className={`${styles["what-we-do"]}  text-3xl md:text-4xl xl:text-5xl font-semibold`}
+          className="text-gradient"
         >
           WHAT WE DO
         </h3>
@@ -22,7 +41,7 @@ export default function WhatWeDoSection() {
             into exceptional projects
           </p>
         </div>
-      </div>
+      </motion.div>
       <div className="flex mt-[10rem]">
         <motion.img
           initial={{ x: -100 }}
@@ -30,7 +49,7 @@ export default function WhatWeDoSection() {
           transition={{ duration: 0.5 }}
           src={leftHand}
           alt="hands"
-          className="w-[51%] object-cover  "
+          className="w-[49%] object-cover  "
         />
         <motion.img
           initial={{ x: 100 }}
@@ -38,11 +57,11 @@ export default function WhatWeDoSection() {
           transition={{ duration: 0.5 }}
           src={rightHand}
           alt="hands"
-          className="w-[49%] object-cover "
+          className="w-[51%] object-cover "
         />
       </div>
       <p
-        className="mt-[7rem] text-center text-2xl lg:text-4xl font-normal mx-auto px-[5rem] xl:px-[30rem]"
+        className="mt-[7rem] text-left text-2xl lg:text-4xl font-normal mx-auto px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[20rem]"
         style={{ fontFamily: "Montserrat" }}
       >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
@@ -56,6 +75,7 @@ export default function WhatWeDoSection() {
       <div className="mt-[5.5rem] flex items-center justify-center">
         <WhiteButton content="About Lutsiu.Co" />
       </div>
+      <div className="mt-[6rem] h-[.1rem] bg-black"></div>
     </section>
   );
 }

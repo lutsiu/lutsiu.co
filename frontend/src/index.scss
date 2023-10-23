@@ -21,3 +21,10 @@ ul {
   scrollbar-width: thin;
   scrollbar-color: #888 transparent;
 }
+
+.text-gradient {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(99deg, rgba(235,39,145,1) 0%, rgba(232,126,45,1) 40%, rgba(255,215,33,1) 100%); 
+  @apply text-4xl sm:text-5xl 2xl:text-5xl font-semibold
+}
