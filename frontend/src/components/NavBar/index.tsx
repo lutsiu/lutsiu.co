@@ -4,7 +4,7 @@ import { CgMenu } from "react-icons/cg";
 export default function NavBar() {
   const screenWidth = useGetScreenWidth();
   return (
-    <header className="fixed w-screen z-10">
+    <header className="fixed w-screen z-20 text-white">
       <nav
         className="flex items-center py-[2rem]"
         style={{ background: "rgba(0,0,0,.5)" }}

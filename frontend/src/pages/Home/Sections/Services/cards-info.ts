@@ -1,12 +1,8 @@
-import it1 from "../../../../assets/it-1.jpg";
-import it2 from "../../../../assets/it-2.jpg";
-import it3 from "../../../../assets/it-3.jpeg";
+import it1 from "../../../../assets/services/it-1.jpg";
+import it2 from "../../../../assets/services/it-2.jpg";
+import it3 from "../../../../assets/services/it-3.jpeg";
 
-export interface ICard {
-  img: string;
-  title: string;
-  descr: string;
-}
+import { ICard } from "../../../../interfaces/models";
 
 const cardsInfo: ICard[] = [
   {

@@ -1,5 +1,5 @@
 import {GoArrowRight} from 'react-icons/go';
-import { ICard } from '../cards-info';
+import { ICard } from '../../../../../interfaces/models';
 import styles from './styles.module.scss'
 
 export default function Card(props: ICard) {

@@ -1,5 +1,5 @@
-import leftHand from "../../../../assets/hand-left.png";
-import rightHand from "../../../../assets/hand-right.png";
+import leftHand from "../../../../assets/what-we-do/hand-left.png";
+import rightHand from "../../../../assets/what-we-do/hand-right.png";
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import WhiteButton from "../../../../components/Buttons/WhiteButton";

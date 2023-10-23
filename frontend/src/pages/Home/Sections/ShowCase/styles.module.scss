@@ -1,0 +1,11 @@
+.showcase-tape {
+  background: rgb(235,39,145);
+  background: linear-gradient(99deg, rgba(235,39,145,1) 0%, rgba(232,126,45,1) 40%, rgba(255,215,33,1) 100%); 
+}
+.photo-container {
+  &::before {
+    content: '';
+    @apply top-0 bottom-0 left-0 right-0 absolute z-10;
+    background: rgba(0,0,0, .6);
+  }
+}
