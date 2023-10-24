@@ -1,0 +1,9 @@
+.gradient-text {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: rgba(226, 45, 249, 1);
+  background-image: linear-gradient(125deg, rgba(226, 45, 249, 1) 33%, rgba(24, 188, 235, 1) 67%);
+  background-image: -moz-linear-gradient(125deg, rgba(226, 45, 249, 1) 33%, rgba(24, 188, 235, 1) 67%);
+
+  @apply text-3xl sm:text-4xl 2xl:text-5xl font-bold
+}
