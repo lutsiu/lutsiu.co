@@ -10,7 +10,13 @@ export default function Card(props: ICard) {
       target="_blank"
       className={`relative flex-1 h-[35rem] md:h-[50rem] flex flex-col z-10 overflow-hidden`}
     >
-      <img src={img} alt="card-image" className="w-full flex-1 object-cover hover:scale-105 duration-200" />
+      <div className="h-[40rem] overflow-hidden flex-1">
+        <img
+          src={img}
+          alt="card-image"
+          className="w-full h-full object-cover hover:scale-105 duration-200 max-h-[40rem]"
+        />
+      </div>
       <div className=" flex flex-col gap-[1rem] text-black mt-[1.5rem]">
         <h4
           style={{ fontFamily: "Montserrat" }}

@@ -1,6 +1,8 @@
+import {  useRef,  } from "react";
 import WhiteButton from "../../../../components/Buttons/WhiteButton";
 import useCount from "../../../../hooks/useCount";
 import CultureItem from "./CultureItem";
+import useShowAnimation from "../../../../hooks/useShowAnimation";
 
 export interface ICounterItem {
   title: string;
@@ -10,9 +12,18 @@ export interface ICounterItem {
 }
 
 export default function Culture() {
-  const productsCounter = useCount(45);
-  const teamCollaboratorsCounter = useCount(100);
-  const monthsCounter = useCount(12);
+  const sectionRef = useRef<null | HTMLTableSectionElement>(null);
+
+  const conditionalCallback = () => {
+    const {current} = sectionRef;
+    if (!current) return false;
+    const {top} = current.getBoundingClientRect();
+    if (window.innerHeight - top > 75) return true
+  };
+  const startCount = useShowAnimation(conditionalCallback);
+  const productsCounter = useCount(45, startCount);
+  const teamCollaboratorsCounter = useCount(100, startCount);
+  const monthsCounter = useCount(12, startCount);
 
   const info: ICounterItem[] = [
     {
@@ -38,7 +49,10 @@ export default function Culture() {
     },
   ];
   return (
-    <section className="bg-black mt-[28rem] px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[22rem] items-center py-[7rem]">
+    <section
+      className="bg-black mt-[28rem] px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[22rem] items-center py-[7rem]"
+      ref={sectionRef}
+    >
       <div className="flex flex-col md:flex-row gap-[5rem]">
         {info.map((infoItem, i) => {
           const { title, descr, color, counter } = infoItem;
@@ -54,7 +68,7 @@ export default function Culture() {
         })}
       </div>
       <div className="w-fit mx-auto mt-[5rem]">
-        <WhiteButton content="Discover our Culture" black={true}/>
+        <WhiteButton content="Discover our Culture" black={true} />
       </div>
     </section>
   );

@@ -3,36 +3,31 @@ import rightHand from "../../../../assets/what-we-do/hand-right.png";
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import WhiteButton from "../../../../components/Buttons/WhiteButton";
-import { useEffect, useState } from "react";
+import { useRef } from "react";
+import useShowAnimation from "../../../../hooks/useShowAnimation";
 export default function WhatWeDoSection() {
-  const [showAnimation, setShowAnimation] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const {scrollY} = window;
-      if (scrollY > 200) {
-        setShowAnimation(true);
+  const sectionRef = useRef<null | HTMLTableSectionElement>(null);
+  const conditionalCallback = () => {
+    const {current} = sectionRef;
+      if (!current) return false;
+      const rect = current.getBoundingClientRect();
+      if (window.innerHeight / 2 > rect.top) {
+        return true
       }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  };
+  const showAnimation = useShowAnimation(conditionalCallback);
   return (
-    <section className=" section-hands bg-white  flex flex-col text-black">
+    <section
+      className="section-hands bg-white  flex flex-col text-black"
+      ref={sectionRef}
+    >
       <motion.div
         initial={{ y: 150, opacity: 0 }}
-        animate={{ y: showAnimation? 0: 150, opacity: showAnimation ? 1 : 0 }}
-        transition={{duration: 0.5, delay: 0.1}}
+        animate={{ y: showAnimation ? 0 : 150, opacity: showAnimation ? 1 : 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
         className={`${styles["what-we-do-container"]} mt-[5rem] text-center`}
       >
-        <h3
-          className="text-gradient"
-        >
-          WHAT WE DO
-        </h3>
+        <h3 className="text-gradient">WHAT WE DO</h3>
         <div className="mt-[1.5rem]">
           <p className="font-semibold text-4xl md:text-5xl xl:text-7xl">
             We transform your aspirations
@@ -45,7 +40,7 @@ export default function WhatWeDoSection() {
       <div className="flex mt-[10rem]">
         <motion.img
           initial={{ x: -100 }}
-          animate={{ x: 0 }}
+          animate={{ x: showAnimation ? 0 : -100 }}
           transition={{ duration: 0.5 }}
           src={leftHand}
           alt="hands"
@@ -53,7 +48,7 @@ export default function WhatWeDoSection() {
         />
         <motion.img
           initial={{ x: 100 }}
-          animate={{ x: 0 }}
+          animate={{ x: showAnimation ? 0 : 100 }}
           transition={{ duration: 0.5 }}
           src={rightHand}
           alt="hands"

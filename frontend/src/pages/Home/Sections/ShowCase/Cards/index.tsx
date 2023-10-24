@@ -2,37 +2,28 @@ import Card from "../Card";
 import cardsInfo from "../data/cards-info";
 import WhiteButton from "../../../../../components/Buttons/WhiteButton";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import useShowAnimation from "../../../../../hooks/useShowAnimation";
 interface Props {
   sectionRef: React.MutableRefObject<HTMLTableSectionElement | null>;
 }
 export default function Cards(props: Props) {
   const { sectionRef } = props;
-  const [showAnimation, setShowAnimation] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      const { current } = sectionRef;
-      if (current) {
-        const rect = current.getBoundingClientRect();
 
-        if (rect.top < 100) {
-          setShowAnimation(true);
-        }
-      }
-    };
+  const conditionalCallback = () => {
+    const { current } = sectionRef;
+    if (!current) return false;
+    const rect = current.getBoundingClientRect();
+    if (rect.top < 100) return true;
+  };
 
-    window.addEventListener("scroll", handleScroll);
+  const showAnimation = useShowAnimation(conditionalCallback);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [sectionRef]);
   return (
     <div className="flex flex-col  mt-[5rem] px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[22rem] lg:absolute top-[35rem]">
       <motion.div
         initial={{ opacity: 0, y: 200 }}
-        animate={{opacity: showAnimation ? 1 : 0, y: showAnimation ? 0 : 200}}
-        transition={{duration: .6}}
+        animate={{ opacity: showAnimation ? 1 : 0, y: showAnimation ? 0 : 200 }}
+        transition={{ duration: 0.6 }}
         className="gap-[2.5rem] flex lg:flex-row flex-col z-10"
       >
         {cardsInfo.map((card, i) => {

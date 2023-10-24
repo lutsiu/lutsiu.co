@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-export default function useCount(targetValue: number) {
+export default function useCount(targetValue: number, startCount:boolean) {
   const [count, setCount] = useState(0);
     
   useEffect(() => {
+    if (!startCount) return
     const counter = setInterval(() => {
       if (count < targetValue) {
         setCount(count + 1);
@@ -14,7 +15,7 @@ export default function useCount(targetValue: number) {
     return () => {
       clearInterval(counter);
     }
-  }, [count, targetValue]);
+  }, [count, targetValue, startCount]);
 
   return count
 }
