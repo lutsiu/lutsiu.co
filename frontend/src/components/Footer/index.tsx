@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 export default function Footer() {
 
   return (
-    <footer className="bg-black mt-[8rem]">
+    <footer className="bg-black mt-[8rem] text-white">
       <TopPart/>
       <div className={`h-[0.1rem] ${styles['gradient-bg']}`}></div>
       <BottomPart/>

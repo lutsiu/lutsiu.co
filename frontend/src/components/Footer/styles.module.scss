@@ -6,3 +6,8 @@
 .gradient-bg {
   background-image: linear-gradient(99deg, rgba(235,39,145,1) 0%, rgba(232,126,45,1) 40%, rgba(255,215,33,1) 100%); 
 }
+.socialLink {
+  &:hover>* {
+    @apply text-white; 
+  }
+}
