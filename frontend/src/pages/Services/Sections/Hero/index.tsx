@@ -1,7 +1,7 @@
-import styles from "./styles.module.scss";
+import styles from "../../styles.module.scss";
 export default function Hero() {
   return (
-    <section className="hero-section bg-black px-[3rem] sm:px-[7rem] lg:px-[10rem] 2xl:px-[15rem] pt-[18rem] pb-[6rem] lg:pb-[12rem]">
+    <section className={`${styles['service-padding']} hero-section bg-black  pt-[18rem] pb-[6rem] lg:pb-[12rem]`}>
       <h3 className={`${styles.gradient} text-3xl lg:text-4xl font-bold`}>
         END-TO-END SOLUTIONS
       </h3>

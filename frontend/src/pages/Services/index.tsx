@@ -1,10 +1,12 @@
-import Hero from "./Sections/Hero";
+import HeroSection from "./Sections/Hero";
+import ServiceSection from "./Sections/Service";
 
 export default function Services() {
 
   return (
-    <div className="">
-      <Hero/>
+    <div >
+      <HeroSection/>
+      <ServiceSection/>
     </div>
   )
 }
