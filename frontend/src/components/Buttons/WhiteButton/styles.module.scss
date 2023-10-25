@@ -6,3 +6,11 @@
   @apply bg-black text-white border-white
   hover:bg-white hover:text-black;
 }
+
+.padding-normal {
+  @apply px-[4rem] md:px-[7rem];
+}
+
+.padding-small {
+  @apply px-[3rem];
+}

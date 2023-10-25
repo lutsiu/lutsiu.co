@@ -1,6 +1,7 @@
 import useGetScreenWidth from "../../hooks/useGetScreenWidth";
 import ScheduleCallButton from "../Buttons/ScheduleCall";
 import { CgMenu } from "react-icons/cg";
+import Logo from "../Logo";
 export default function NavBar() {
   const screenWidth = useGetScreenWidth();
   return (
@@ -10,20 +11,7 @@ export default function NavBar() {
         style={{ background: "rgba(0,0,0,.5)" }}
       >
         <div className="flex justify-between  w-full h-[5rem] px-[2rem] sm:px-[8rem]">
-          <div className="relative h-full w-[13rem]">
-            <h2
-              className="absolute text-lg font-medium whitespace-nowrap"
-              style={{ fontFamily: "DM Sans" }}
-            >
-              we are
-            </h2>
-            <h2
-              className="absolute top-[1.2rem] font-bold tracking-normal text-5xl"
-              style={{ fontFamily: "Venussb medext, sans-serif" }}
-            >
-              lutsiu.co
-            </h2>
-          </div>
+          <Logo/>
           <div className="flex items-center flex-1 justify-end">
             {screenWidth >= 992 && (
               <p

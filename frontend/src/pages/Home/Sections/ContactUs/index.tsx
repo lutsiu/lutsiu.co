@@ -18,7 +18,7 @@ export default function ContactUs() {
   const showAnimation = useShowAnimation(conditionalCallback);
 
   return (
-    <section className="contact-us-section  px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[22rem] pt-[4rem]" ref={sectionRef}>
+    <section className={'contact-us-section padding pt-[4rem]'} ref={sectionRef}>
       <motion.div
         initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: showAnimation ? 1 : 0, y: showAnimation ? 0 : 200 }}

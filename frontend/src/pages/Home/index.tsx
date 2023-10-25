@@ -5,6 +5,7 @@ import ServicesSection from "./Sections/Services";
 import ShowCaseSection from "./Sections/ShowCase";
 import CultureSection from "./Sections/Culture";
 import BlogSection from "./Sections/Blog";
+import ContactUsSection from "./Sections/ContactUs";
 export default function HomePage() {
   
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <ShowCaseSection/>
       <CultureSection/>
       <BlogSection/>
+      <ContactUsSection/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import moviePlatform from "../../../../../assets/showcase/movie-platform.jpg";
-import chatApp from "../../../../../assets/showcase/chat-application.jpg";
-import socialMediaApp from "../../../../../assets/showcase/social-media-application.png";
+import moviePlatform from "../../../../../assets/home-page/showcase/movie-platform.jpg";
+import chatApp from "../../../../../assets/home-page/showcase/chat-application.jpg";
+import socialMediaApp from "../../../../../assets/home-page/showcase/social-media-application.png";
 import { ICard } from "../../../../../interfaces/models";
 
 const cardsInfo: ICard[] = [

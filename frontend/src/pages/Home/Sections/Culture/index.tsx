@@ -50,7 +50,7 @@ export default function Culture() {
   ];
   return (
     <section
-      className="bg-black mt-[28rem] px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[22rem] items-center py-[7rem]"
+      className="bg-black mt-[28rem] padding items-center py-[7rem]"
       ref={sectionRef}
     >
       <div className="flex flex-col md:flex-row gap-[5rem]">

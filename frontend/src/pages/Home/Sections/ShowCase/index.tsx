@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import design from "../../../../assets/showcase/design-2.jpg";
+import design from "../../../../assets/home-page/showcase/design-2.jpg";
 import GradientTape from "./GradientTape";
 import styles from "./styles.module.scss";
 import Cards from "./Cards";

@@ -1,6 +1,6 @@
-import it1 from "../../../../assets/services/it-1.jpg";
-import it2 from "../../../../assets/services/it-2.jpg";
-import it3 from "../../../../assets/services/it-3.jpeg";
+import it1 from "../../../../assets/home-page/services/it-1.jpg";
+import it2 from "../../../../assets/home-page/services/it-2.jpg";
+import it3 from "../../../../assets/home-page/services/it-3.jpeg";
 
 import { ICard } from "../../../../interfaces/models";
 

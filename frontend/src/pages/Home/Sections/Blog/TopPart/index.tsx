@@ -1,4 +1,4 @@
-import cyber from "../../../../../assets/blog/cyber.jpg";
+import cyber from "../../../../../assets/home-page/blog/cyber.jpg";
 import useShowAnimation from "../../../../../hooks/useShowAnimation";
 import styles from "../styles.module.scss";
 import { useRef } from "react";

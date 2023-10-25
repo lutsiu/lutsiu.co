@@ -1,5 +1,5 @@
 import useGetScreenWidth from "../../../../hooks/useGetScreenWidth";
-import shapeFuture from "../../../../assets/hero/shape-future.png";
+import shapeFuture from "../../../../assets/home-page/hero/shape-future.png";
 export default function HeroSection() {
   const screenWidth = useGetScreenWidth();
   return (

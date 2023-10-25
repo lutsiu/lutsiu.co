@@ -19,7 +19,7 @@ export default function Cards(props: Props) {
   const showAnimation = useShowAnimation(conditionalCallback);
 
   return (
-    <div className="flex flex-col  mt-[5rem] px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[22rem] lg:absolute top-[35rem]">
+    <div className="flex flex-col  mt-[5rem] padding lg:absolute top-[35rem]">
       <motion.div
         initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: showAnimation ? 1 : 0, y: showAnimation ? 0 : 200 }}

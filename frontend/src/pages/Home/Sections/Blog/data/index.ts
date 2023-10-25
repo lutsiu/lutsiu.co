@@ -1,7 +1,7 @@
 import { ICard } from "../../../../../interfaces/models";
-import security from "../../../../../assets/blog/security.jpg";
-import design from "../../../../../assets/blog/design.jpg";
-import productivity from "../../../../../assets/blog/productivity.jpg";
+import security from "../../../../../assets/home-page/blog/security.jpg";
+import design from "../../../../../assets/home-page/blog/design.jpg";
+import productivity from "../../../../../assets/home-page/blog/productivity.jpg";
 const data: ICard[] = [
   {
     img: productivity,

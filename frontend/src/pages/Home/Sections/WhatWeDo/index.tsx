@@ -1,5 +1,5 @@
-import leftHand from "../../../../assets/what-we-do/hand-left.png";
-import rightHand from "../../../../assets/what-we-do/hand-right.png";
+import leftHand from "../../../../assets/home-page/what-we-do/hand-left.png";
+import rightHand from "../../../../assets/home-page/what-we-do/hand-right.png";
 import { motion } from "framer-motion";
 import styles from "./styles.module.scss";
 import WhiteButton from "../../../../components/Buttons/WhiteButton";
@@ -56,7 +56,7 @@ export default function WhatWeDoSection() {
         />
       </div>
       <p
-        className="mt-[7rem] text-left text-2xl lg:text-4xl font-normal mx-auto px-[3rem] sm:px-[8rem] xl:px-[17rem] 2xl:px-[22rem]"
+        className="padding mt-[7rem] text-left text-2xl lg:text-4xl font-normal mx-auto "
         style={{ fontFamily: "Montserrat" }}
       >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
