@@ -1,0 +1,8 @@
+.gradient {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(99deg, rgba(235,39,145,1) 0%, rgba(232,126,45,1) 40%, rgba(255,215,33,1) 100%); 
+}
+.gradient-bg {
+  background-image: linear-gradient(99deg, rgba(235,39,145,1) 0%, rgba(232,126,45,1) 40%, rgba(255,215,33,1) 100%); 
+}
