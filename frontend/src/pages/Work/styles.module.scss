@@ -1,0 +1,22 @@
+.gradient {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    99deg,
+    rgba(164, 35, 227, 1) 0%,
+    rgba(36, 240, 163, 1) 0%,
+    rgba(211, 238, 50, 1) 51%,
+    rgba(62, 251, 255, 1) 100%
+  );
+  background-image: -moz-linear-gradient(
+    99deg,
+    rgba(164, 35, 227, 1) 0%,
+    rgba(36, 240, 163, 1) 0%,
+    rgba(211, 238, 50, 1) 51%,
+    rgba(62, 251, 255, 1) 100%
+  );
+}
+
+.padding {
+  @apply 2xl:px-[30rem] md:px-[10rem] sm:px-[6rem] px-[3rem]
+}
