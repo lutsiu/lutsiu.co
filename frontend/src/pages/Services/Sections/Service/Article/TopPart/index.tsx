@@ -2,7 +2,8 @@ import styles from "../../../../styles.module.scss";
 import { GoArrowRight } from "react-icons/go";
 import colors from "../colors";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import useShowAnimation from "../../../../../../hooks/useShowAnimation";
 interface Props {
   firstTitle: string;
   secondTitle: string;
@@ -14,11 +15,29 @@ export default function TopPart(props: Props) {
   const { firstTitle, secondTitle, descr, color } = props;
   const secondTitleArr = secondTitle.split(" ");
 
+  const topPartRef = useRef<null | HTMLDivElement>(null);
   function handleLearnMoreIsHovered(isHovered: boolean) {
     isHovered ? setLearnMoreIsHovered(true) : setLearnMoreIsHovered(false);
   }
+
+  const conditionalCB = () => {
+    const { current } = topPartRef;
+    if (!current) return false;
+    const { top } = current.getBoundingClientRect();
+    if (top < window.innerHeight && top > -150) {
+      return true;
+    }
+  };
+  const showAnimation = useShowAnimation(conditionalCB);
+ 
   return (
-    <div className={`${styles["service-padding"]} mt-[7rem]`}>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{opacity: showAnimation ? 1: 0, y: showAnimation ? 0 : 100}}
+      transition={{duration: .5}}
+      className={`${styles["service-padding"]} mt-[7rem]`}
+      ref={topPartRef}
+    >
       <div>
         <h5 style={{ color: colors[color] }} className="text-3xl font-bold">
           {firstTitle}
@@ -40,12 +59,12 @@ export default function TopPart(props: Props) {
           <motion.div
             initial={{ x: 0 }}
             animate={{ x: learnMoreIsHovered ? 10 : 0 }}
-            transition={{duration: .3}}
+            transition={{ duration: 0.3 }}
           >
             <GoArrowRight className="w-[2.3rem] h-[2.3rem]" />
           </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
