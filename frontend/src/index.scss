@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,7 +12,7 @@ html {
 html,
 :root,
 body {
-  @apply h-full w-full box-border m-0 p-0 ;
+  @apply h-full w-full box-border m-0 p-0;
 }
 ul {
   @apply m-0 p-0;
@@ -25,8 +25,13 @@ ul {
 .text-gradient {
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(99deg, rgba(235,39,145,1) 0%, rgba(232,126,45,1) 40%, rgba(255,215,33,1) 100%); 
-  @apply text-4xl sm:text-5xl 2xl:text-5xl font-semibold
+  background-image: linear-gradient(
+    99deg,
+    rgba(235, 39, 145, 1) 0%,
+    rgba(232, 126, 45, 1) 40%,
+    rgba(255, 215, 33, 1) 100%
+  );
+  @apply text-4xl sm:text-5xl 2xl:text-5xl font-semibold;
 }
 
 .padding {

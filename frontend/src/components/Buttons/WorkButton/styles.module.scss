@@ -1,0 +1,9 @@
+.button {
+  @apply border-black;
+  &-isActive {
+    @apply border-fuchsia-600;
+  }
+  &:hover {
+    @apply border-fuchsia-600;
+  }
+}

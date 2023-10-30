@@ -6,6 +6,10 @@ export default function useShowAnimation(
   const [showAnimation, setShowAnimation] = useState(false);
 
   useEffect(() => {
+    if (conditionalCallback()) {
+      setShowAnimation(true);
+      return
+    }
     const handleScroll = () => {
       if (conditionalCallback()) {
         setShowAnimation(true);

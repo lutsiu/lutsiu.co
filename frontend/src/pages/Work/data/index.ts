@@ -1,4 +1,4 @@
-import { IWorkCard } from "../../../interfaces/models";
+import { IWorkCard, WorkButtonFilter } from "../../../interfaces/models";
 import AeroNova from "../../../assets/work-page/AeroNova.jpg";
 import ApexWare from "../../../assets/work-page/ApexWare.jpg";
 import AquaTech from "../../../assets/work-page/AquaTech.jpg";
@@ -20,6 +20,9 @@ import XpressIQ from "../../../assets/work-page/XpressIQ.jpg";
 import ZenVolt from "../../../assets/work-page/ZenVolt.jpg";
 import ZephyrCo from "../../../assets/work-page/ZephyrCo.jpg";
 
+interface ButtonsData {
+  filter: WorkButtonFilter;
+}
 const workData: IWorkCard[] = [
   {
     img: AeroNova,
@@ -163,4 +166,10 @@ const workData: IWorkCard[] = [
   },
 ];
 
+export const buttonsData: ButtonsData[] = [
+  { filter: "all" },
+  { filter: "product" },
+  { filter: "mobile" },
+  { filter: "UX/UI" },
+];
 export default workData;
