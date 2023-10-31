@@ -18,3 +18,10 @@ export interface IWorkCard extends ICard {
   type: WorkButtonFilter,
   subtitle: string
 }
+export interface IPerson {
+  fullName: string,
+  role: string,
+  descr: string,
+  email: string,
+  img: string
+}
