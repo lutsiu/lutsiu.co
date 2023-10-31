@@ -1,5 +1,5 @@
-import img1 from '../../../assets/blog-page/img-1.jpg'
-import img2 from '../../../assets/blog-page/img-2.jpg'
+import img1 from '../../../assets/blog-page/img-2.jpg'
+import img2 from '../../../assets/blog-page/img-1.jpg'
 import img3 from '../../../assets/blog-page/img-3.jpg'
 import img4 from '../../../assets/blog-page/img-4.jpg'
 import img5 from '../../../assets/blog-page/img-5.jpg'
@@ -16,67 +16,67 @@ import { ICard } from '../../../interfaces/models'
 const programmingTopicsData: ICard[]= [
   {
     title: "Introduction to Java",
-    descr: "Learn the fundamentals of Java programming, from variables to object-oriented concepts.",
+    descr: "Explore the foundations of Java programming, from variable declarations to mastering object-oriented concepts. This course provides an in-depth understanding of Java for beginners.",
     img: img1
   },
   {
     title: "Mastering Python Basics",
-    descr: "Become a Python expert by mastering the basics of the language and its applications.",
+    descr: "Embark on a journey to become a Python expert. This comprehensive course covers everything from basic syntax to advanced Python applications and real-world problem-solving.",
     img: img2
   },
   {
     title: "Web Development with React",
-    descr: "Dive into web development with React.js and build interactive user interfaces.",
+    descr: "Dive deep into the world of web development with React.js. Learn to build interactive user interfaces and create dynamic web applications using this popular library.",
     img: img3
   },
   {
     title: "Exploring Data Science",
-    descr: "Explore the world of data science and discover insights hidden in data sets.",
+    descr: "Uncover the power of data science. Explore data sets and reveal hidden insights. Dive into statistical analysis, machine learning, and data visualization techniques.",
     img: img4
   },
   {
     title: "Next.js Essentials",
-    descr: "Discover what you need to know about Next.js for server-rendered React applications.",
+    descr: "Get a comprehensive understanding of Next.js, the popular framework for server-rendered React applications. Master server-side rendering and optimize your web projects.",
     img: img5
   },
   {
     title: "JavaScript for Beginners",
-    descr: "A beginner's guide to JavaScript programming, from variables to functions.",
+    descr: "Start your coding journey with JavaScript. This beginner's guide covers variables, functions, and more, making programming accessible to all skill levels.",
     img: img6
   },
   {
     title: "Python Data Analysis",
-    descr: "Analyze data using Python and its powerful libraries for data manipulation.",
+    descr: "Delve into Python's data analysis capabilities. Analyze data with powerful libraries like Pandas and NumPy, and gain insights to drive data-driven decisions.",
     img: img7
   },
   {
     title: "Front-End Web Design",
-    descr: "Learn the essentials of front-end web design and create stunning websites.",
+    descr: "Learn the essentials of front-end web design, including HTML, CSS, and JavaScript. Create stunning websites and user interfaces that captivate your audience.",
     img: img8
   },
   {
     title: "Introduction to SQL",
-    descr: "Get started with SQL and learn to manage and query relational databases.",
+    descr: "Master the fundamentals of SQL. Get started with relational databases, learn SQL queries, and manage data effectively in various database systems.",
     img: img9
   },
   {
     title: "Advanced CSS Techniques",
-    descr: "Take your CSS skills to the next level with advanced techniques and best practices.",
+    descr: "Take your CSS skills to the next level. Explore advanced techniques like Flexbox and Grid, and master responsive design for modern web development.",
     img: img10
   },
   {
     title: "Machine Learning Fundamentals",
-    descr: "Delve into the fundamentals of machine learning and its practical applications.",
+    descr: "Delve into the fundamentals of machine learning. Understand algorithms, model training, and real-world applications of this transformative technology.",
     img: img11
   },
   {
     title: "Cybersecurity Basics",
-    descr: "Understand the basics of cybersecurity and protect your digital assets from threats.",
+    descr: "Comprehend the essential principles of cybersecurity. Safeguard your digital assets from threats with this introductory course on cybersecurity.",
     img: img12
   },
   {
     title: "Full-Stack Web Development",
-    descr: "Become a full-stack developer by mastering both front-end and back-end technologies.",
+    descr: "Become a full-stack developer by mastering both front-end and back-end technologies. Develop comprehensive web applications and gain a competitive edge in the industry.",
     img: img13
   },
 ];
