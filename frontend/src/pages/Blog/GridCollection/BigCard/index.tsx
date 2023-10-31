@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { ICard } from "../../../../interfaces/models";
 import { motion } from "framer-motion";
 import useShowAnimation from "../../../../hooks/useShowAnimation";
