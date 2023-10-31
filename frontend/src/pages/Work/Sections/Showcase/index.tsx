@@ -13,8 +13,27 @@ export default function ShowcaseSection() {
   return (
     <section className={`${styles.padding} showcase-section`}>
       <Buttons projectsFilter={projectsFilter} setFilter={setProjectsFilter} />
-      <GridCollection data={firstDataChunk}/>
-      <GridCollection data={secondDataChunk}/>
+      {projectsFilter === "all" && (
+        <>
+          <GridCollection
+            data={firstDataChunk}
+            showBigCard={true}
+            typeToShow={projectsFilter}
+          />
+          <GridCollection
+            data={secondDataChunk}
+            showBigCard={true}
+            typeToShow={projectsFilter}
+          />
+        </>
+      )}
+      {projectsFilter !== "all" && (
+        <GridCollection
+          data={data}
+          showBigCard={false}
+          typeToShow={projectsFilter}
+        />
+      )}
     </section>
   );
 }
