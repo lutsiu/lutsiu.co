@@ -25,7 +25,7 @@ export default function HeroSection() {
         transition={{ duration: 0.65, ease: "easeOut" }}
       >
         <h4 className={`${styles.gradient} font-bold text-2xl md:text-4xl `}>
-          LUTSIU'S BLOG: TECH INSIGHTS
+          LUTSIU'S BLOG: WEB INSIGHTS
         </h4>
         <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-semibold">
           Check out our Best Articles
