@@ -15,5 +15,6 @@ export interface IService {
 }
 export type WorkButtonFilter = "all" | 'product' | 'mobile' | 'UX/UI'
 export interface IWorkCard extends ICard {
-  type: WorkButtonFilter
+  type: WorkButtonFilter,
+  subtitle: string
 }

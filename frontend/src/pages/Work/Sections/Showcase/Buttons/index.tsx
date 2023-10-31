@@ -10,7 +10,7 @@ export default function Buttons(props: Props) {
   const { projectsFilter, setFilter } = props;
 
   return (
-    <div className="py-[5rem] flex justify-between">
+    <div className={`py-[5rem] flex flex-wrap sm:flex-nowrap justify-center 2xl:justify-between gap-[1rem] md:gap-[2rem] lg:gap-[3rem] 2xl:gap-[0] `}>
       {buttonsData.map((btn, i) => {
         const { filter } = btn;
         const isActive = filter === projectsFilter;

@@ -14,7 +14,7 @@ export default function WorkButton(props: Props) {
   }
   return (
     <button
-      className={`${styles.button} ${isActive ? styles['button-isActive'] : ""} rounded-[2.5rem] bg-transparent text-black border-[.3rem]  py-[.7rem] px-[8.5rem] font-medium text-2xl duration-300 `}
+      className={`${styles.button} ${isActive ? styles['button-isActive'] : ""}  w-[12rem] sm:w-fit rounded-[2.5rem] bg-transparent text-black text-center border-[.3rem]  py-[.7rem] px-[4rem] sm:px-[3rem] md:px-[5rem] lg:px-[7rem] 2xl:px-[7.5rem] font-medium text-2xl duration-300 `}
       style={{
         fontFamily: "DM Sans",
       }}

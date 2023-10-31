@@ -1,0 +1,22 @@
+.grid-collection {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-y-[4rem] sm:gap-y-0 gap-x-[1rem] md:gap-x-[2rem];
+  & > div {
+    @apply cursor-pointer;
+    img {
+      filter: brightness(75%);
+      @apply duration-300;
+      &:hover {
+        filter: brightness(100%)
+      }
+    }
+  }
+  &-element {
+    @apply h-[25.4rem] sm:h-[24.7rem] md:h-[44.7rem] lg:h-[53.5rem] sm:mb-[2rem] md:mb-[0];
+    
+  }
+  &-first-element {
+    @apply sm:col-span-3 h-[40rem] ;
+    
+    
+  }
+}
