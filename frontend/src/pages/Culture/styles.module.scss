@@ -1,3 +1,30 @@
 .padding {
   @apply 2xl:px-[22rem] lg:px-[12rem] md:px-[10rem] sm:px-[5rem] px-[2rem]
 }
+.gradient {
+  background: rgb(164, 35, 227);
+  background-image: -moz-linear-gradient(
+    99deg,
+    rgba(164, 35, 227, 1) 0%,
+    rgba(240, 36, 90, 1) 0%,
+    rgba(238, 50, 198, 1) 51%,
+    rgba(166, 62, 255, 1) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    99deg,
+    rgba(164, 35, 227, 1) 0%,
+    rgba(240, 36, 90, 1) 0%,
+    rgba(238, 50, 198, 1) 51%,
+    rgba(166, 62, 255, 1) 100%
+  );
+  background-image: linear-gradient(
+    99deg,
+    rgba(164, 35, 227, 1) 0%,
+    rgba(240, 36, 90, 1) 0%,
+    rgba(238, 50, 198, 1) 51%,
+    rgba(166, 62, 255, 1) 100%
+  );
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

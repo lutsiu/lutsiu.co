@@ -1,6 +1,8 @@
 import DescriptionSection from "./Sections/DescriptionSection";
 import HeroSection from "./Sections/Hero";
 
+import StaffSection from "./Sections/Staff";
+
 
 export default function CulturePage() {
 
@@ -8,6 +10,7 @@ export default function CulturePage() {
     <div>
       <HeroSection/>
       <DescriptionSection/>
+      <StaffSection/>
     </div>
   )
 }

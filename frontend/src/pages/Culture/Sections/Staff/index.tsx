@@ -13,6 +13,10 @@ export default function StaffSection() {
       <TopSide />
       <People setActivePerson={setActivePerson} />
       {activePersonData && <PersonInfo {...activePersonData} />}
+      <div className="flex flex-col items-end mt-[2rem] sm:mt-[5rem]">
+        <div className="h-[.1rem] bg-red-600 w-full"></div>
+        <p className="border-b-[.1rem] border-black text-2xl mt-[2rem] font-medium">{activePersonData?.email}</p>
+      </div>
     </section>
   );
 }

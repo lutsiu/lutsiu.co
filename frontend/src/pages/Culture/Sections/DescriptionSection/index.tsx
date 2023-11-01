@@ -12,7 +12,7 @@ export default function DescriptionSection() {
   const conditionCB = () => {
     const { current } = descrRef;
     if (!current) return false;
-    const { top, bottom } = current.getBoundingClientRect();
+    const { top} = current.getBoundingClientRect();
     if (top < 450 ) {
       return true;
     }
