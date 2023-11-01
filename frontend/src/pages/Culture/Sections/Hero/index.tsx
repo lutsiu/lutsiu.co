@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import {  useRef } from "react";
 import people from "../../../../assets/culture-page/people.jpg";
 import styles from "./styles.module.scss";
 import { motion } from "framer-motion";
@@ -10,7 +10,6 @@ export default function HeroSection() {
     const { current } = heroRef;
     if (!current) return false;
     const { top } = current.getBoundingClientRect();
-    console.log(top);
     if (top < 400 && top > -75) return true;
   }
 
