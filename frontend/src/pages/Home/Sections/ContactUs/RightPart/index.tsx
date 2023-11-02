@@ -1,6 +1,5 @@
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import WhiteButton from "../../../../../components/Buttons/WhiteButton";
 import { useEffect, useState } from "react";
 export default function RightPart() {
   const [initialDisabled, setInitialDisabled] = useState(true);
@@ -21,7 +20,7 @@ export default function RightPart() {
     message: Yup.string().required("Required field"),
   });
 
-  function onSubmit(values: { name: string; email: string; message: string }) {
+  function onSubmit() {
     ("");
   }
   const formik = useFormik({ initialValues, validationSchema, onSubmit });
