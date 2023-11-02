@@ -2,6 +2,8 @@ import { useRef } from "react";
 import { ICard } from "../../../../interfaces/models";
 import { motion } from "framer-motion";
 import useShowAnimation from "../../../../hooks/useShowAnimation";
+import useSrcIsLoading from "../../../../hooks/useSrcIsLoading";
+import SkeletonElement from "../../../../components/Skeleton";
 export default function BigCard(props: ICard) {
   const { img, title, descr } = props;
   const bigCardRef = useRef<null | HTMLDivElement>(null);
@@ -14,21 +16,25 @@ export default function BigCard(props: ICard) {
       return true;
     }
   };
-
+  const { srcIsLoading, imageSrc } = useSrcIsLoading(img);
   const showAnimation = useShowAnimation(conditionalCB);
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: showAnimation ? 1 : 0, y: showAnimation ? 0 : 100 }}
-      transition={{duration: .5}}
+      transition={{ duration: 0.5 }}
       ref={bigCardRef}
     >
       <div className="relative h-[43rem] md:w-[70%] lg:w-[62rem] md:h-[46rem]">
-        <img
-          src={img}
-          alt="card-picture"
-          className="h-full w-full  object-cover"
-        />
+        {srcIsLoading && <SkeletonElement className="w-full h-full" />}
+        {!srcIsLoading && (
+          <img
+            src={imageSrc}
+            alt="card-picture"
+            className="h-full w-full  object-cover"
+            loading="lazy"
+          />
+        )}
         <div className="absolute bg-black text-white w-[100%]  md:w-[30rem] lg:w-[40rem] bottom-0 md:bottom-auto  md:top-[10%] lg:top-[20%] right-0 md:right-[-20rem] p-[2rem]">
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
             {title}

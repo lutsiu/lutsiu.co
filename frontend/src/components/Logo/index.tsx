@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export default function Logo() {
   return (
-    <div className="relative h-full w-[13rem] text-white">
+    <Link to={'/'} className=" block relative h-full w-[13rem] text-white">
       <h2
         className="absolute text-lg font-medium whitespace-nowrap "
         style={{ fontFamily: "DM Sans" }}
@@ -13,6 +15,6 @@ export default function Logo() {
       >
         lutsiu.co
       </h2>
-    </div>
+    </Link>
   );
 }

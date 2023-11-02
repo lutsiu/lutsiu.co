@@ -1,9 +1,11 @@
 import { GoArrowRight } from "react-icons/go";
 import { ICard } from "../../../../../interfaces/models";
 import { Link } from "react-router-dom";
+import useSrcIsLoading from "../../../../../hooks/useSrcIsLoading";
+import SkeletonElement from "../../../../../components/Skeleton";
 export default function Card(props: ICard) {
   const { img, title, descr, link } = props;
-
+  const { srcIsLoading, imageSrc } = useSrcIsLoading(img);
   return (
     <Link
       to={`${link}`}
@@ -11,11 +13,15 @@ export default function Card(props: ICard) {
       className={`relative flex-1 h-[35rem] md:h-[50rem] flex flex-col z-10 overflow-hidden`}
     >
       <div className="h-[40rem] overflow-hidden flex-1">
-        <img
-          src={img}
-          alt="card-image"
-          className="w-full h-full object-cover hover:scale-105 duration-200 max-h-[40rem]"
-        />
+        {srcIsLoading && <SkeletonElement className="w-full h-full"/>}
+        {!srcIsLoading && (
+          <img
+            src={imageSrc}
+            alt="card-image"
+            className="w-full h-full object-cover hover:scale-105 duration-200 max-h-[40rem]"
+            loading="lazy"
+          />
+        )}
       </div>
       <div className=" flex flex-col gap-[1rem] text-black mt-[1.5rem]">
         <h4

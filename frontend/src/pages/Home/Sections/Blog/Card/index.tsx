@@ -1,15 +1,20 @@
+import SkeletonElement from "../../../../../components/Skeleton";
+import useSrcIsLoading from "../../../../../hooks/useSrcIsLoading";
 import { ICard } from "../../../../../interfaces/models";
 import { GoArrowRight } from "react-icons/go";
 export default function Card(props: ICard) {
   const { img, title, descr } = props;
+  const {srcIsLoading, imageSrc} = useSrcIsLoading(img);
   return (
     <div className="flex flex-col gap-[1rem] cursor-pointer overflow-hidden">
       <div className="h-[22rem] overflow-hidden">
-        <img
-          src={img}
+        {srcIsLoading && <SkeletonElement className="w-full h-full"/>}
+        {!srcIsLoading && <img
+          src={imageSrc}
           alt="card-image"
           className="w-full h-full duration-200 hover:scale-105 object-cover"
-        />
+          loading="lazy"
+        />}
       </div>
       <div className="flex flex-col gap-[1rem] pr-[2rem]">
         <h4

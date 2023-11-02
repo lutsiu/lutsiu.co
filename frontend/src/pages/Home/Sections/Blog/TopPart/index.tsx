@@ -3,6 +3,8 @@ import useShowAnimation from "../../../../../hooks/useShowAnimation";
 import styles from "../styles.module.scss";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import useSrcIsLoading from "../../../../../hooks/useSrcIsLoading";
+import SkeletonElement from "../../../../../components/Skeleton";
 export default function TopPart() {
   const topPartRef = useRef<null | HTMLDivElement>(null);
 
@@ -16,7 +18,7 @@ export default function TopPart() {
   };
 
   const showAnimation = useShowAnimation(conditionalCallback);
-
+  const {imageSrc, srcIsLoading} = useSrcIsLoading(cyber);
   return (
     <div ref={topPartRef}>
       <h5 className={`${styles["gradient-text"]}`}>OUR IDEAS</h5>
@@ -41,11 +43,13 @@ export default function TopPart() {
         className="mt-[4rem] lg:mt-[6rem] relative"
       >
         <div className="sm:w-[88%] md:w-[75%] lg:w-[85%] xl:w-[80%] 2xl:w-[63%] sm:h-[45rem] md:h-[35rem] lg:h-[50rem]">
-          <img
-            src={cyber}
+          {srcIsLoading && <SkeletonElement className="w-full h-full"/>}
+          {!srcIsLoading && <img
+            src={imageSrc}
             alt="cyber-img"
             className="w-full h-full object-cover"
-          />
+            loading="lazy"
+          />}
         </div>
         <div className="bg-black text-white sm:max-w-[23rem] md:max-w-[45rem] lg:max-w-[43rem]  xl:max-w-[55rem] absolute sm:right-0 sm:top-[8rem] md:top-[6rem] lg:top-[10rem] p-[2rem] sm:p-[1.5rem] md:p-[3rem] 2xl:p-[5rem]">
           <h4

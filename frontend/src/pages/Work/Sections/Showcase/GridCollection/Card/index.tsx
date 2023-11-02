@@ -1,3 +1,5 @@
+import SkeletonElement from "../../../../../../components/Skeleton";
+import useSrcIsLoading from "../../../../../../hooks/useSrcIsLoading";
 import {
   IWorkCard,
   WorkButtonFilter,
@@ -10,6 +12,7 @@ interface Props {
 export default function Card(props: Props) {
   const { card, typeToShow } = props;
   const { img, title, descr, subtitle, type } = card;
+  const { imageSrc, srcIsLoading } = useSrcIsLoading(img);
   return (
     <>
       {(typeToShow === "all" || typeToShow === type) && (
@@ -17,11 +20,17 @@ export default function Card(props: Props) {
           data-filter={type}
           className={`${styles["grid-collection-element"]}`}
         >
-          <img
-            src={img}
-            alt="company"
-            className="w-full h-[20rem] sm:h-[18rem] md:h-[20rem] lg:h-[35rem] object-cover"
-          />
+          {srcIsLoading && (
+            <SkeletonElement className="w-full h-[20rem] sm:h-[18rem] md:h-[20rem] lg:h-[35rem]" />
+          )}
+          {!srcIsLoading && (
+            <img
+              src={imageSrc}
+              alt="company"
+              className="w-full h-[20rem] sm:h-[18rem] md:h-[20rem] lg:h-[35rem] object-cover"
+              loading="lazy"
+            />
+          )}
           <div className="mt-[1rem]">
             <h3 className="text-5xl sm:text-3xl md:text-5xl font-bold sm:font-black md:font-medium">
               {title}

@@ -2,10 +2,13 @@ import { useRef } from "react";
 import { IWorkCard } from "../../../../../../interfaces/models";
 import { motion } from "framer-motion";
 import useShowAnimation from "../../../../../../hooks/useShowAnimation";
+import useSrcIsLoading from "../../../../../../hooks/useSrcIsLoading";
+import SkeletonElement from "../../../../../../components/Skeleton";
 
 export default function BigCard(props: IWorkCard) {
   const { img, title, type, subtitle, descr } = props;
   const bigCardRef = useRef<null | HTMLDivElement>(null);
+  const { srcIsLoading, imageSrc } = useSrcIsLoading(img);
   const conditionalCB = () => {
     const { current } = bigCardRef;
     if (!current) return false;
@@ -21,12 +24,20 @@ export default function BigCard(props: IWorkCard) {
     <motion.div
       data-filter={type}
       ref={bigCardRef}
-      className={`sm:mb-[3rem] lg:mb-[6rem] relative h-[40rem]`}
+      className={`mt-[3rem] mb-[4rem] sm:mb-[3rem] sm:mt-[0] lg:mb-[6rem] relative h-[40rem]`}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: showAnimation ? 1 : 0, y: showAnimation ? 0 : 100 }}
       transition={{ duration: 0.5 }}
     >
-      <img src={img} alt="company" className="w-full h-full object-cover" />
+      {srcIsLoading && <SkeletonElement className="w-full h-full" />}
+      {!srcIsLoading && (
+        <img
+          src={imageSrc}
+          alt="company"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      )}
       <div className="mt-[1rem] absolute bottom-[2rem] md:bottom-[4rem] left-[2rem] md:left-[4rem] text-white">
         <h3 className="text-5xl md:text-7xl font-bold">{title}</h3>
         <h4

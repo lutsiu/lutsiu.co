@@ -1,9 +1,11 @@
 import TransparentButton from "../../../../../../components/Buttons/TransparentButton";
 import colors from "../colors";
 import styles from "../../../../styles.module.scss";
-import {useRef } from "react";
+import { useRef } from "react";
 import useShowAnimation from "../../../../../../hooks/useShowAnimation";
 import { motion } from "framer-motion";
+import useSrcIsLoading from "../../../../../../hooks/useSrcIsLoading";
+import SkeletonElement from "../../../../../../components/Skeleton";
 interface Props {
   img: string;
   imgTitle: string;
@@ -14,7 +16,7 @@ export default function BottomPart(props: Props) {
   const { img, imgDescr, imgTitle, color } = props;
   const parentRef = useRef<null | HTMLDivElement>(null);
   const descrRef = useRef<null | HTMLDivElement>(null);
-
+  const { srcIsLoading, imageSrc } = useSrcIsLoading(img);
   const parentConditionalCB = () => {
     const { current } = parentRef;
     if (!current) return false;
@@ -54,11 +56,15 @@ export default function BottomPart(props: Props) {
       <div
         className={`${styles["service-padding"]} h-[60rem] relative flex  box-border`}
       >
-        <img
-          src={img}
-          alt="article-img"
-          className="w-full h-full object-cover grayscale "
-        />
+        {srcIsLoading && <SkeletonElement className="w-full h-full" />}
+        {!srcIsLoading && (
+          <img
+            src={imageSrc}
+            alt="article-img"
+            className="w-full h-full object-cover grayscale "
+            loading="lazy"
+          />
+        )}
         <motion.div
           className=" text-white absolute pl-[3rem] sm:pl-[5rem] lg:pl-[10rem] z-10 top-[28%] flex flex-col gap-[3rem]"
           ref={descrRef}

@@ -16,9 +16,7 @@ export default function Links() {
       <li>
         <Link to="/culture" className="hover:text-gray-400 duration-200">Culture</Link>
       </li>
-      <li>
-        <Link to="/contact" className="hover:text-gray-400 duration-200">Contact</Link>
-      </li>
+   
     </ul>
   )
 }
