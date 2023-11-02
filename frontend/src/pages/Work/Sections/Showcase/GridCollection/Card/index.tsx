@@ -28,7 +28,7 @@ export default function Card(props: Props) {
               src={imageSrc}
               alt="company"
               className="w-full h-[20rem] sm:h-[18rem] md:h-[20rem] lg:h-[35rem] object-cover"
-              loading="lazy"
+              
             />
           )}
           <div className="mt-[1rem]">

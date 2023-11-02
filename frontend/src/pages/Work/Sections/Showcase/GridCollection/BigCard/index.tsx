@@ -35,7 +35,7 @@ export default function BigCard(props: IWorkCard) {
           src={imageSrc}
           alt="company"
           className="w-full h-full object-cover"
-          loading="lazy"
+          
         />
       )}
       <div className="mt-[1rem] absolute bottom-[2rem] md:bottom-[4rem] left-[2rem] md:left-[4rem] text-white">

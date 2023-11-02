@@ -22,7 +22,7 @@ export default function Card(props: Props) {
         src={imageSrc}
         alt="person-img"
         className="object-cover min-h-[80%] max-h-[80%] w-full grayscale-[100%] hover:grayscale-0 duration-300"
-        loading="lazy"
+        
       />}
       <div className="mt-[1rem] lg:mt-[2rem]">
         <h5 className="text-2xl sm:text-3xl lg:text-4xl text-center w-[90%]">

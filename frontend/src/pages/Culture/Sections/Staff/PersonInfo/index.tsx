@@ -11,7 +11,6 @@ export default function PersonInfo(props: IPerson) {
         {srcIsLoading && <SkeletonElement className="h-full w-full"/>}
         {!srcIsLoading && <img
           src={imageSrc}
-          loading="lazy"
           alt="person-image"
           className="w-full h-full object-cover"
         />}

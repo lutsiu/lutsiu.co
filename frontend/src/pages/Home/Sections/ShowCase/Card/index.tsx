@@ -19,7 +19,7 @@ export default function Card(props: ICard) {
             src={imageSrc}
             alt="card-image"
             className="w-full h-full object-cover hover:scale-105 duration-200 max-h-[40rem]"
-            loading="lazy"
+            
           />
         )}
       </div>

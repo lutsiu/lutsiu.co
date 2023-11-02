@@ -32,7 +32,7 @@ export default function BigCard(props: ICard) {
             src={imageSrc}
             alt="card-picture"
             className="h-full w-full  object-cover"
-            loading="lazy"
+   
           />
         )}
         <div className="absolute bg-black text-white w-[100%]  md:w-[30rem] lg:w-[40rem] bottom-0 md:bottom-auto  md:top-[10%] lg:top-[20%] right-0 md:right-[-20rem] p-[2rem]">

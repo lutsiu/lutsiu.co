@@ -48,7 +48,7 @@ export default function TopPart() {
             src={imageSrc}
             alt="cyber-img"
             className="w-full h-full object-cover"
-            loading="lazy"
+            
           />}
         </div>
         <div className="bg-black text-white sm:max-w-[23rem] md:max-w-[45rem] lg:max-w-[43rem]  xl:max-w-[55rem] absolute sm:right-0 sm:top-[8rem] md:top-[6rem] lg:top-[10rem] p-[2rem] sm:p-[1.5rem] md:p-[3rem] 2xl:p-[5rem]">

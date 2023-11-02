@@ -13,7 +13,7 @@ export default function Card(props: ICard) {
           src={imageSrc}
           alt="card-image"
           className="w-full h-full duration-200 hover:scale-105 object-cover"
-          loading="lazy"
+          
         />}
       </div>
       <div className="flex flex-col gap-[1rem] pr-[2rem]">

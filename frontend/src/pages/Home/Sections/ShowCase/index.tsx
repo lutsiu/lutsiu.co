@@ -23,7 +23,7 @@ export default function ShowCase() {
               src={imageSrc}
               alt="design-image"
               className="w-full h-full object-cover"
-              loading="lazy"
+              
             />
           )}
         </div>

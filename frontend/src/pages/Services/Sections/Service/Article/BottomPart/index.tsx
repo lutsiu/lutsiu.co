@@ -62,7 +62,7 @@ export default function BottomPart(props: Props) {
             src={imageSrc}
             alt="article-img"
             className="w-full h-full object-cover grayscale "
-            loading="lazy"
+            
           />
         )}
         <motion.div

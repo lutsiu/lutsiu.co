@@ -15,7 +15,6 @@ export default function Card(props: ICard) {
           src={imageSrc}
           alt="card-image"
           className="w-full h-full object-cover"
-          loading="lazy"
         />
       )}
       <div className="absolute z-10 top-0 p-[1.5rem] sm:p-[2rem] xl:p-[3rem] text-white">
