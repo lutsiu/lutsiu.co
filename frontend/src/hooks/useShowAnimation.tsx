@@ -15,11 +15,16 @@ export default function useShowAnimation(
         setShowAnimation(true);
       }
     };
-
+    const handleTouchMove = () => {
+      if (conditionalCallback()) {
+        setShowAnimation(true);
+      }
+    };
     window.addEventListener("scroll", handleScroll);
-
+    window.addEventListener("touchmove", handleTouchMove);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, [conditionalCallback]);
   return showAnimation

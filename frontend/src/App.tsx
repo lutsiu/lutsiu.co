@@ -6,7 +6,6 @@ import WorkPage from './pages/Work';
 import BlogPage from './pages/Blog';
 import CulturePage from './pages/Culture';
 export default function App() {
-
   const router = createBrowserRouter([
     {path: '/', element: <MainWrapper/>, children: [
       {index: true, element: <HomePage/>},

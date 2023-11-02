@@ -21,6 +21,7 @@ export default function GridCollection(props: Props) {
     const { current } = gridCollectionRef;
     if (!current) return false;
     const { top, } = current.getBoundingClientRect();
+
     if (top < 500  ) {
       return true;
     }

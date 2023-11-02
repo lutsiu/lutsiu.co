@@ -9,21 +9,23 @@ import SkeletonElement from "../../../../components/Skeleton";
 export default function ShowCase() {
   const sectionRef = useRef<null | HTMLTableSectionElement>(null);
   const { srcIsLoading, imageSrc } = useSrcIsLoading(design);
+
+  const isTouchDevice = matchMedia("(hover: none)").matches;
+
   return (
     <section
       className="showcase-section bg-white relative min-h-[150vh]"
       ref={sectionRef}
     >
-      <GradientTape sectionRef={sectionRef} />
+      {!isTouchDevice && <GradientTape sectionRef={sectionRef} />}
       <div className="relative">
         <div className={`${styles["photo-container"]} relative h-[50rem]`}>
-          {srcIsLoading && <SkeletonElement className="w-full h-full"/>}
+          {srcIsLoading && <SkeletonElement className="w-full h-full" />}
           {!srcIsLoading && (
             <img
               src={imageSrc}
               alt="design-image"
               className="w-full h-full object-cover"
-              
             />
           )}
         </div>

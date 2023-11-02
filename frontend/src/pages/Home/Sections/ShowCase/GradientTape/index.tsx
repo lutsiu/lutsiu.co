@@ -1,23 +1,23 @@
-import styles from '../styles.module.scss'
+import styles from "../styles.module.scss";
 import placeholderText from "../data/placeholderText";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 interface Props {
-  sectionRef: React.MutableRefObject<HTMLTableSectionElement | null>
+  sectionRef: React.MutableRefObject<HTMLTableSectionElement | null>;
 }
 export default function GradientTape(props: Props) {
-  const {sectionRef} = props
+  const { sectionRef } = props;
   const [tapeTranslateX, setTapeTranslateX] = useState<null | number>(null);
   useEffect(() => {
     const handleScroll = () => {
       const { current } = sectionRef;
-      if (current) {
-        const rect = current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+      if (!current) return;
 
-        if (rect.top <= windowHeight && rect.bottom > 0 && rect.top > 0) {
-          const gradientTapeTranslateX = 100 - (rect.top / windowHeight) * 100;
-          setTapeTranslateX(gradientTapeTranslateX);
-        }
+      const rect = current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top <= windowHeight && rect.bottom > 0 && rect.top > 0) {
+        const gradientTapeTranslateX = 100 - (rect.top / windowHeight) * 100;
+        setTapeTranslateX(gradientTapeTranslateX);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -25,7 +25,7 @@ export default function GradientTape(props: Props) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [sectionRef]);
 
   return (
     <div
