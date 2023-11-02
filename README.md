@@ -1,6 +1,4 @@
-# Lutsiu.co - React, Redux and React-router-dom
-
-Lutsiu.co
+# Lutsiu.co
 
 Welcome to the README for Movie Application built using primarily React,  React-router-dom, Typescript, Formik, Yup and other powerful libraries.
 This website was created for non-commerical purpose based on design from https://www.wearecapicua.com/
