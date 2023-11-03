@@ -27,20 +27,17 @@ export default function Menu(props: Props) {
         style={{ transform: "translateX(-50%)" }}
       >
         <li className="text-white cursor-pointer">
-          <Link to={"/services"} />
-          Services
+          <Link to={'/services'}>Services</Link>
+          
         </li>
         <li className="text-white cursor-pointer">
-          <Link to={"/work"} />
-          Work
+        <Link to={'/work'}>Work</Link>
         </li>
         <li className="text-white cursor-pointer">
-          <Link to={"/blog"} />
-          Blog
+        <Link to={'/blog'}>Blog</Link>
         </li>
         <li className="text-white cursor-pointer">
-          <Link to={"/culture"} />
-          Culture
+        <Link to={'/culture'}>Culture</Link>
         </li>
       </ul>
       <div onClick={() => setShowMenu(false)}>
