@@ -9,6 +9,9 @@ interface Props {
 }
 export default function Menu(props: Props) {
   const { showMenu, setShowMenu } = props;
+  function hideMenu() {
+    setShowMenu(false);
+  }
   return (
     <motion.div
       initial={{ opacity: 0, pointerEvents: "none" }}
@@ -27,20 +30,19 @@ export default function Menu(props: Props) {
         style={{ transform: "translateX(-50%)" }}
       >
         <li className="text-white cursor-pointer">
-          <Link to={'/services'}>Services</Link>
-          
+          <Link to={"/services"} onClick={hideMenu}>Services</Link>
         </li>
         <li className="text-white cursor-pointer">
-        <Link to={'/work'}>Work</Link>
+          <Link to={"/work"} onClick={hideMenu}>Work</Link>
         </li>
         <li className="text-white cursor-pointer">
-        <Link to={'/blog'}>Blog</Link>
+          <Link to={"/blog"} onClick={hideMenu}>Blog</Link>
         </li>
         <li className="text-white cursor-pointer">
-        <Link to={'/culture'}>Culture</Link>
+          <Link to={"/culture"} onClick={hideMenu}>Culture</Link>
         </li>
       </ul>
-      <div onClick={() => setShowMenu(false)}>
+      <div onClick={hideMenu}>
         <IoMdClose className="w-[4rem] h-[4rem] text-white" />
       </div>
     </motion.div>
