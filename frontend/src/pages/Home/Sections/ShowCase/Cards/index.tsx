@@ -43,7 +43,7 @@ export default function Cards(props: Props) {
           molestias quas maiores earum consequatur quis ipsam odit vero dicta
           saepe.
         </p>
-        <div className="w-fit mx-auto mt-[4rem] md:mt-[7rem]">
+        <div className="w-fit mx-auto mt-[4rem] md:mt-[7rem] ">
           <WhiteButton content="Check Out Our Work" />
         </div>
       </div>

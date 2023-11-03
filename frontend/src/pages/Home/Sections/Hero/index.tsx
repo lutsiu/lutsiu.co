@@ -3,7 +3,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="h-screen section-hero hidden sm:block">
+      <section className="2xl:h-screen section-hero hidden sm:block">
         <img
           src={shapeFuture}
           alt="shape-future"

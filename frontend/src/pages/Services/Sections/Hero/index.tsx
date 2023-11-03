@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
     <section
-      className={`${styles["service-padding"]} hero-section bg-black  pt-[18rem] pb-[6rem] lg:pb-[12rem]`}
+      className={`${styles["service-padding"]} hero-section bg-black  pt-[6rem] 2xl:pt-[18rem] pb-[6rem] lg:pb-[12rem]`}
       ref={sectionRef}
     >
       <motion.div
