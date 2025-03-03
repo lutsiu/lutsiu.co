@@ -1,32 +1,45 @@
-# Lutsiu.co
+# **Lutsiu.co**  
 
-Welcome to the README for Movie Application built using primarily React,  React-router-dom, Typescript, Formik, Yup and other powerful libraries.
-This website was created for non-commerical purpose based on design from https://www.wearecapicua.com/
+Welcome to the README for **Lutsiu.co**, a modern chat application built using **React, React Router DOM, TypeScript**, and other powerful libraries.  
 
-Table of Contents
+This project was developed **for non-commercial purposes**, inspired by the design from **[WeAreCapicua](https://www.wearecapicua.com/)**.  
 
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
+## 📖 Table of Contents  
+- [Tech Stack](#tech-stack)  
+- [Installation](#installation)  
 
+## ⚙️ Tech Stack  
 
-## Tech stack
-      
-Chat Application is built on following tech stack:
-  - React;
-  - Tailwind and SCSS;
-  - React-router-dom for routing;
-  - Framer motion for animations;
-  - Formik and Yup for form validation
+Lutsiu.co is built using the following technologies:  
+- **React** – Component-based UI framework  
+- **Tailwind CSS & SCSS** – Modern styling solutions  
+- **React Router DOM** – Client-side routing for seamless navigation  
+- **Framer Motion** – Smooth animations and transitions  
+- **Formik & Yup** – Form handling and validation  
 
+## 🚀 Installation  
 
-## Instalation
-To set up both the backend and frontend of our Chat Application, install necessary files and follow these steps:
-  1. Install required dependencies:
-     ```bash
-     npm i
-  2. Start client application:
-     ```bash
-     cd frontend/npm run dev
+To set up both the backend and frontend of the Chat Application, follow these steps:  
 
+### **1. Clone the repository**  
+```bash
+git clone https://github.com/your-username/lutsiu.co.git
+cd lutsiu.co
+```  
 
+### **2. Install required dependencies**  
+```bash
+npm install
+```  
 
+### **3. Start the client application**  
+```bash
+cd frontend
+npm run dev
+```  
+
+Now, the application should be running on `http://localhost:3000/`.  
+
+---
+
+This version **fixes formatting issues, improves clarity, and ensures proper setup instructions**. Let me know if you need any adjustments! 🚀
