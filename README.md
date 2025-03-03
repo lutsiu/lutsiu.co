@@ -15,7 +15,6 @@ Lutsiu.co is built using the following technologies:
 - **Tailwind CSS & SCSS** – Modern styling solutions  
 - **React Router DOM** – Client-side routing for seamless navigation  
 - **Framer Motion** – Smooth animations and transitions  
-- **Formik & Yup** – Form handling and validation  
 
 ## 🚀 Installation  
 
