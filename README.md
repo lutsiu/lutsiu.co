@@ -1,6 +1,6 @@
 # **Lutsiu.co**  
 
-Welcome to the README for **Lutsiu.co**, a modern chat application built using **React, React Router DOM, TypeScript**, and other powerful libraries.  
+Welcome to the README for **Lutsiu.co**, a modern  application built using **React, React Router DOM, TypeScript**, and other powerful libraries.  
 
 This project was developed **for non-commercial purposes**, inspired by the design from **[WeAreCapicua](https://www.wearecapicua.com/)**.  
 
